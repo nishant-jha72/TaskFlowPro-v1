@@ -1,0 +1,541 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Demo Lead",
+      "email": "lead@taskflow.pro",
+      "password_hash": "$2a$10$w3bH7Q/q1N2v.rTz1e2U3.kK5w5u/Y3r8m8.E5m5"
+    },
+    {
+      "id": 2,
+      "name": "Nishant Jha ",
+      "email": "Nishant@gmail.com",
+      "password_hash": "$2a$10$3zX/KLYY5kNCrrEm.t3Aee2Myxcfh9JOJpQPjB2jNHb3NcFAiX/5C"
+    },
+    {
+      "id": 3,
+      "name": "Khushi Jha",
+      "email": "Khushi@gmail.com",
+      "password_hash": "$2a$10$k9z7gijamFyzlT4gXKdYQuSN/NRus5jPZWhWfU78yI1FPWnQ1ff4S"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "Payment Gateway Integration",
+      "description": "Engineering task board for payment service"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "title": "2's Workspace",
+      "description": "Personal Engineering Board"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "title": "3's Workspace",
+      "description": "Personal Engineering Board"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "title": "Design database",
+      "description": "",
+      "status": "done",
+      "start_date": "2026-09-26",
+      "duration": 2,
+      "position": 0,
+      "end_date": "2026-09-28"
+    },
+    {
+      "id": 2,
+      "project_id": 1,
+      "title": "Initialise the backend",
+      "description": "",
+      "status": "ready",
+      "start_date": "2026-09-28",
+      "duration": 2,
+      "position": 1,
+      "end_date": "2026-09-30"
+    },
+    {
+      "id": 3,
+      "project_id": 1,
+      "title": "create RestAPI",
+      "description": "",
+      "status": "done",
+      "start_date": "2026-09-30",
+      "duration": 1,
+      "position": 2,
+      "end_date": "2026-10-01"
+    },
+    {
+      "id": 4,
+      "project_id": 2,
+      "title": "Backend",
+      "description": "",
+      "status": "not_started",
+      "start_date": "2026-09-27",
+      "duration": 2,
+      "position": 0,
+      "end_date": "2026-09-29"
+    },
+    {
+      "id": 5,
+      "project_id": 2,
+      "title": "Database",
+      "description": "",
+      "status": "blocked",
+      "start_date": "2026-09-29",
+      "duration": 2,
+      "position": 1,
+      "end_date": "2026-10-01"
+    },
+    {
+      "id": 6,
+      "project_id": 2,
+      "title": "API",
+      "description": "",
+      "status": "blocked",
+      "start_date": "2026-10-01",
+      "duration": 2,
+      "position": 2,
+      "end_date": "2026-10-03"
+    },
+    {
+      "id": 7,
+      "project_id": 3,
+      "title": "Backend",
+      "description": "",
+      "status": "done",
+      "start_date": "2026-09-27",
+      "duration": 2,
+      "position": 0,
+      "end_date": "2026-09-29"
+    },
+    {
+      "id": 8,
+      "project_id": 3,
+      "title": "Database",
+      "description": "",
+      "status": "ready",
+      "start_date": "2026-09-29",
+      "duration": 2,
+      "position": 1,
+      "end_date": "2026-10-01"
+    },
+    {
+      "id": 9,
+      "project_id": 3,
+      "title": "frontend",
+      "description": "",
+      "status": "blocked",
+      "start_date": "2026-10-01",
+      "duration": 2,
+      "position": 2,
+      "end_date": "2026-10-03"
+    },
+    {
+      "id": 10,
+      "project_id": 3,
+      "title": "Done",
+      "description": "",
+      "status": "ready",
+      "start_date": "2026-09-29",
+      "duration": 2,
+      "position": 3,
+      "end_date": "2026-10-01"
+    }
+  ],
+  "user_dependencies": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "task_id": 2,
+      "depends_on_task_id": 1,
+      "confirmed": true
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "task_id": 3,
+      "depends_on_task_id": 2,
+      "confirmed": true
+    },
+    {
+      "id": 3,
+      "user_id": 2,
+      "task_id": 5,
+      "depends_on_task_id": 4,
+      "confirmed": true,
+      "created_at": "2026-09-27T07:47:02.056Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "task_id": 6,
+      "depends_on_task_id": 5,
+      "confirmed": true,
+      "created_at": "2026-09-27T07:47:14.891Z"
+    },
+    {
+      "id": 5,
+      "user_id": 3,
+      "task_id": 8,
+      "depends_on_task_id": 7,
+      "confirmed": true,
+      "created_at": "2026-09-27T07:48:24.275Z"
+    },
+    {
+      "id": 6,
+      "user_id": 3,
+      "task_id": 9,
+      "depends_on_task_id": 8,
+      "confirmed": true,
+      "created_at": "2026-09-27T07:48:53.254Z"
+    },
+    {
+      "id": 7,
+      "user_id": 3,
+      "task_id": 10,
+      "depends_on_task_id": 7,
+      "confirmed": true,
+      "created_at": "2026-09-27T07:49:10.684Z"
+    }
+  ],
+  "master_dependencies": [
+    {
+      "id": 1,
+      "source_concept": "auth",
+      "target_concept": "schema",
+      "match_score": 1,
+      "usage_count": 5
+    },
+    {
+      "id": 2,
+      "source_concept": "api",
+      "target_concept": "schema",
+      "match_score": 1,
+      "usage_count": 10
+    },
+    {
+      "id": 3,
+      "source_concept": "test",
+      "target_concept": "api",
+      "match_score": 1,
+      "usage_count": 4
+    },
+    {
+      "id": 4,
+      "source_concept": "webhook",
+      "target_concept": "auth",
+      "match_score": 0.9,
+      "usage_count": 3
+    },
+    {
+      "id": 5,
+      "source_concept": "deploy",
+      "target_concept": "test",
+      "match_score": 0.9,
+      "usage_count": 3
+    },
+    {
+      "id": 6,
+      "source_concept": "frontend",
+      "target_concept": "api",
+      "match_score": 0.85,
+      "usage_count": 6
+    },
+    {
+      "id": 7,
+      "source_concept": "ui",
+      "target_concept": "api",
+      "match_score": 0.85,
+      "usage_count": 4
+    },
+    {
+      "id": 8,
+      "source_concept": "payment",
+      "target_concept": "auth",
+      "match_score": 0.8,
+      "usage_count": 2
+    },
+    {
+      "id": 9,
+      "source_concept": "update",
+      "target_concept": "schema",
+      "match_score": 0.9,
+      "usage_count": 2
+    },
+    {
+      "id": 10,
+      "source_concept": "initialize",
+      "target_concept": "schema",
+      "match_score": 0.85,
+      "usage_count": 1
+    },
+    {
+      "id": 11,
+      "source_concept": "schema",
+      "target_concept": "backend",
+      "match_score": 0.9,
+      "usage_count": 2
+    },
+    {
+      "id": 12,
+      "source_concept": "ui",
+      "target_concept": "schema",
+      "match_score": 0.85,
+      "usage_count": 1
+    },
+    {
+      "id": 13,
+      "source_concept": "done",
+      "target_concept": "backend",
+      "match_score": 0.85,
+      "usage_count": 1
+    }
+  ],
+  "user_dependency_relations": [],
+  "user_task_preferences": [
+    {
+      "user_id": 1,
+      "task_id": 1,
+      "col_position": 0
+    },
+    {
+      "user_id": 1,
+      "task_id": 2,
+      "col_position": 0
+    },
+    {
+      "user_id": 1,
+      "task_id": 3,
+      "col_position": 0
+    },
+    {
+      "user_id": 1,
+      "task_id": 4,
+      "col_position": 1
+    },
+    {
+      "user_id": 1,
+      "task_id": 5,
+      "col_position": 0
+    }
+  ],
+  "task_dependencies": [
+    {
+      "task_id": 2,
+      "depends_on_task_id": 1
+    },
+    {
+      "task_id": 3,
+      "depends_on_task_id": 2
+    },
+    {
+      "task_id": 3,
+      "depends_on_task_id": 1
+    }
+  ],
+  "dependency_patterns": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "source_concept": "auth",
+      "target_concept": "schema",
+      "confidence": 1,
+      "accepted_count": 5
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "source_concept": "api",
+      "target_concept": "schema",
+      "confidence": 1,
+      "accepted_count": 10
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "source_concept": "test",
+      "target_concept": "api",
+      "confidence": 1,
+      "accepted_count": 4
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "source_concept": "initialise",
+      "target_concept": "design",
+      "confidence": 0.8,
+      "accepted_count": 1
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "source_concept": "create",
+      "target_concept": "initialise",
+      "confidence": 0.8,
+      "accepted_count": 1
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "source_concept": "create",
+      "target_concept": "design",
+      "confidence": 0.8,
+      "accepted_count": 1
+    },
+    {
+      "id": 7,
+      "user_id": 2,
+      "source_concept": "initialize",
+      "target_concept": "implement",
+      "confidence": 0.8,
+      "accepted_count": 1
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "source_concept": "update",
+      "target_concept": "schema",
+      "confidence": 0.9,
+      "accepted_count": 2
+    },
+    {
+      "id": 9,
+      "user_id": 1,
+      "source_concept": "initialize",
+      "target_concept": "schema",
+      "confidence": 0.85,
+      "accepted_count": 1
+    },
+    {
+      "id": 10,
+      "user_id": 2,
+      "source_concept": "schema",
+      "target_concept": "backend",
+      "confidence": 0.9,
+      "accepted_count": 2
+    },
+    {
+      "id": 11,
+      "user_id": 3,
+      "source_concept": "ui",
+      "target_concept": "schema",
+      "confidence": 0.85,
+      "accepted_count": 1
+    },
+    {
+      "id": 12,
+      "user_id": 3,
+      "source_concept": "done",
+      "target_concept": "backend",
+      "confidence": 0.85,
+      "accepted_count": 1
+    }
+  ],
+  "ai_suggestions": [
+    {
+      "id": 1,
+      "project_id": 1,
+      "source": "knowledge_base",
+      "payload": {
+        "prerequisite_id": 1,
+        "dependent_id": 2,
+        "reasoning": "Pattern match: Auth endpoints depend on Database Schema design",
+        "prereq_title": "Design Database Schema",
+        "dep_title": "Implement Auth Endpoint"
+      },
+      "accepted": true
+    },
+    {
+      "id": 2,
+      "project_id": 2,
+      "source": "llm",
+      "payload": {
+        "prerequisite_id": 4,
+        "dependent_id": 5,
+        "prereq_title": "Implement database",
+        "dep_title": "initialize backend",
+        "reasoning": "AI Grounded Suggestion: Task 'initialize backend' requires outputs from prerequisite 'Implement database'."
+      },
+      "accepted": false
+    },
+    {
+      "id": 3,
+      "project_id": 2,
+      "source": "llm",
+      "payload": {
+        "prerequisite_id": 5,
+        "dependent_id": 6,
+        "prereq_title": "initialize backend",
+        "dep_title": "Design Restfull APIS",
+        "match_score_pct": 85,
+        "reasoning": "AI Grounded Suggestion 2: Execution of 'Design Restfull APIS' relies on 'initialize backend'."
+      },
+      "accepted": false
+    },
+    {
+      "id": 4,
+      "project_id": 2,
+      "source": "knowledge_base",
+      "payload": {
+        "prerequisite_id": 7,
+        "dependent_id": 5,
+        "prereq_title": "Create database and migrate the Tables ",
+        "dep_title": "initialize backend",
+        "reasoning": "DAG System Pattern Match: 'initialize' typically depends on 'schema' (1 workspace confirmations).",
+        "match_score_pct": 65
+      },
+      "accepted": false
+    },
+    {
+      "id": 5,
+      "project_id": 3,
+      "source": "knowledge_base",
+      "payload": {
+        "prerequisite_id": 7,
+        "dependent_id": 8,
+        "prereq_title": "Backend",
+        "dep_title": "Database",
+        "reasoning": "DAG System Pattern Match: Existing task 'Database' depends on 'Backend'.",
+        "match_score_pct": 73
+      },
+      "accepted": null
+    },
+    {
+      "id": 6,
+      "project_id": 3,
+      "source": "knowledge_base",
+      "payload": {
+        "prerequisite_id": 7,
+        "dependent_id": 10,
+        "prereq_title": "Backend",
+        "dep_title": "Done",
+        "reasoning": "DAG System Pattern Match: Existing task 'Done' depends on 'Backend'.",
+        "match_score_pct": 65
+      },
+      "accepted": null
+    },
+    {
+      "id": 7,
+      "project_id": 3,
+      "source": "knowledge_base",
+      "payload": {
+        "prerequisite_id": 8,
+        "dependent_id": 9,
+        "prereq_title": "Database",
+        "dep_title": "frontend",
+        "reasoning": "DAG System Pattern Match: Existing task 'frontend' depends on 'Database'.",
+        "match_score_pct": 65
+      },
+      "accepted": null
+    }
+  ]
+}
