@@ -12,6 +12,8 @@
  *  - GET  /api/graph  → edges from confirmed user_dependencies only
  */
 
+require('dotenv').config();
+
 const express = require('express');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');

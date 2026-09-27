@@ -12,7 +12,8 @@ class GeminiLLMProvider extends LLMInterface {
     this.apiKey = apiKey;
     if (this.apiKey) {
       const genAI = new GoogleGenerativeAI(this.apiKey);
-      this.model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const modelName = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+      this.model = genAI.getGenerativeModel({ model: modelName });
     }
   }
 
